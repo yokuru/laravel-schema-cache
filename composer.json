@@ -28,7 +28,10 @@
         "laravel": {
             "providers": [
                 "Yokuru\\SchemaCache\\ServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "SchemaCache": "Yokuru\\SchemaCache\\Facade\\SchemaCache"
+            }
         }
     }
 }
