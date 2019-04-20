@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Yokubo\SchemaCache;
+namespace Yokuru\SchemaCache;
 
 use Doctrine\DBAL\Schema\Table;
 

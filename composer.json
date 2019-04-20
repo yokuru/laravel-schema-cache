@@ -1,5 +1,5 @@
 {
-    "name": "yokubo/laravel-schema-cache",
+    "name": "yokuru/laravel-schema-cache",
     "description": "Cache the schema manager",
     "type": "library",
     "license": "MIT",
@@ -14,13 +14,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Yokubo\\SchemaCache\\": "src/"
+            "Yokuru\\SchemaCache\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Yokubo\\SchemaCache\\ServiceProvider"
+                "Yokuru\\SchemaCache\\ServiceProvider"
             ]
         }
     }

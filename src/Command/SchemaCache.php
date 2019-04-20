@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Yokubo\SchemaCache\Commands;
+namespace Yokuru\SchemaCache\Commands;
 
 use Illuminate\Console\Command;
-use Yokubo\SchemaCache\SchemaService;
+use Yokuru\SchemaCache\SchemaService;
 
 class SchemaCache extends Command
 {

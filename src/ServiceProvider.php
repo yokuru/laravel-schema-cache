@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Yokubo\SchemaCache;
+namespace Yokuru\SchemaCache;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as Provider;
-use Yokubo\SchemaCache\Commands\SchemaCache;
-use Yokubo\SchemaCache\Commands\SchemaClear;
+use Yokuru\SchemaCache\Commands\SchemaCache;
+use Yokuru\SchemaCache\Commands\SchemaClear;
 
 class ServiceProvider extends Provider implements DeferrableProvider
 {
