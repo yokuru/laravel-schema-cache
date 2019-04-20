@@ -1,0 +1,27 @@
+{
+    "name": "yokubo/laravel-schema-cache",
+    "description": "Cache the schema manager",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yokuru",
+            "email": "takashi.yokubo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Yokubo\\SchemaCache\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yokubo\\SchemaCache\\ServiceProvider"
+            ]
+        }
+    }
+}
