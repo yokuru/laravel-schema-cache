@@ -37,6 +37,22 @@ class SchemaService
     }
 
     /**
+     * Cache schema information to file
+     */
+    public function cacheSchema(): void
+    {
+        $this->files->put($this->getCachedSchemaPath(), serialize($this->selectSchema()));
+    }
+
+    /**
+     * Clear cache file
+     */
+    public function clearCache(): void
+    {
+        $this->files->delete($this->getCachedSchemaPath());
+    }
+
+    /**
      * Load schema information from cached file
      * @return Table[]
      * @throws
@@ -57,22 +73,6 @@ class SchemaService
     }
 
     /**
-     * Cache schema information to file
-     */
-    public function cacheSchema(): void
-    {
-        $this->files->put($this->getCachedSchemaPath(), serialize($this->selectSchema()));
-    }
-
-    /**
-     * Clear cache file
-     */
-    public function clearCache(): void
-    {
-        $this->files->delete($this->getCachedSchemaPath());
-    }
-
-    /**
      * @return bool
      */
     private function isCached(): bool
@@ -85,6 +85,6 @@ class SchemaService
      */
     private function getCachedSchemaPath(): string
     {
-        return app()->bootstrapPath() . '/cache/schema.php';
+        return app()->bootstrapPath('/cache/schema.php');
     }
 }

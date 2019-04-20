@@ -16,7 +16,7 @@ class SchemaHolder
      * Set tables
      * @param Table[] $tables
      */
-    public function setTables(array $tables)
+    public function setTables(array $tables): void
     {
         foreach ($tables as $table) {
             $this->tables[$table->getName()] = $table;

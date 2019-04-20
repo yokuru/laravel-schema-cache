@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Yokuru\SchemaCache\Commands;
+namespace Yokuru\SchemaCache\Command;
 
 use Illuminate\Console\Command;
 use Yokuru\SchemaCache\SchemaService;

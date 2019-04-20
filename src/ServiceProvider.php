@@ -5,8 +5,8 @@ namespace Yokuru\SchemaCache;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as Provider;
-use Yokuru\SchemaCache\Commands\SchemaCache;
-use Yokuru\SchemaCache\Commands\SchemaClear;
+use Yokuru\SchemaCache\Command\SchemaCache;
+use Yokuru\SchemaCache\Command\SchemaClear;
 
 class ServiceProvider extends Provider implements DeferrableProvider
 {
@@ -14,7 +14,6 @@ class ServiceProvider extends Provider implements DeferrableProvider
     public function register()
     {
         $this->app->singleton(SchemaHolder::class, SchemaHolder::class);
-        $this->app->bind(SchemaService::class, SchemaService::class);
     }
 
     public function boot()
