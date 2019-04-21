@@ -1,0 +1,18 @@
+language: php
+php:
+  - '7.1'
+  - '7.2'
+  - '7.3'
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+  - travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest
+
+script:
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_success:
+  - travis_retry vendor/bin/coveralls -v
