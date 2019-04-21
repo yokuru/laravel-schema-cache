@@ -1,6 +1,6 @@
 {
     "name": "yokuru/laravel-schema-cache",
-    "description": "Cache the schema manager",
+    "description": "A database schema loading and caching library for Laravel.",
     "keywords": [
         "laravel",
         "doctrine",
@@ -24,7 +24,7 @@
         "illuminate/console": "^5.8",
         "illuminate/database": "^5.8",
         "illuminate/filesystem": "^5.8",
-        "doctrine/dbal": "^2.10",
+        "doctrine/dbal": "^2.9",
         "mockery/mockery": "^1.2"
     },
     "autoload": {
@@ -49,6 +49,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
-        "orchestra/testbench": "^3.5"
+        "orchestra/testbench": "^3.5",
+        "php-coveralls/php-coveralls": "^2.1"
     }
 }

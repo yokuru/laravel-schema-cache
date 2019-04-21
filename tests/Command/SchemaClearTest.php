@@ -1,20 +1,20 @@
 <?php
 declare(strict_types=1);
 
-namespace Yokuru\SchemaCacheTests\Commands;
+namespace Yokuru\SchemaCacheTests\Command;
 
 use Doctrine\DBAL\Schema\Table;
 use Yokuru\SchemaCache\SchemaService;
 use Yokuru\SchemaCache\ServiceProvider;
 use Yokuru\SchemaCacheTests\TestCase;
 
-class SchemaCacheTest extends TestCase
+class SchemaClearTest extends TestCase
 {
 
-    public function testSchemaCache()
+    public function testSchemaClear()
     {
-        $this->artisan('schema:cache')
-            ->expectsOutput('Schema cached successfully!');
+        $this->artisan('schema:clear')
+            ->expectsOutput('Schema cache cleared!');
     }
 
     protected function getPackageProviders($app)
@@ -23,10 +23,9 @@ class SchemaCacheTest extends TestCase
         $schemaServiceMock->shouldReceive('describeTables')->andReturn([
             new Table('test')
         ]);
-        $schemaServiceMock->shouldReceive('clearCache')->andReturn(null);
 
         // It should be called `cacheSchema`
-        $schemaServiceMock->shouldReceive('cacheSchema')->once()->andReturn(null);
+        $schemaServiceMock->shouldReceive('clearCache')->once()->andReturn(null);
         $app->instance(SchemaService::class, $schemaServiceMock);
 
         return [ServiceProvider::class];
