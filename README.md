@@ -1,6 +1,10 @@
 Laravel Schema Cache
 ===
 
+[![Build Status](https://travis-ci.org/yokuru/laravel-schema-cache.svg?branch=master)](https://travis-ci.org/yokuru/laravel-schema-cache)
+[![Coverage Status](https://coveralls.io/repos/github/yokuru/laravel-schema-cache/badge.svg?branch=feature%2Fcoverage)](https://coveralls.io/github/yokuru/laravel-schema-cache?branch=feature%2Fcoverage)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 A database schema loading and caching library for [Laravel](https://laravel.com/).
 
 
