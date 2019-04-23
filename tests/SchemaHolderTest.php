@@ -20,6 +20,11 @@ class SchemaHolderTest extends TestCase
         $target->setTables($tables);
         $this->assertSame($tables[0], $target->getTable('test1'));
         $this->assertSame($tables[1], $target->getTable('test2'));
+
+        $actualTables = $target->getTables();
+        $this->assertEquals(2, count($actualTables));
+        $this->assertSame($tables[0], $actualTables['test1']);
+        $this->assertSame($tables[1], $actualTables['test2']);
     }
 
     /**
