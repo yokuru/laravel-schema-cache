@@ -7,7 +7,6 @@ Laravel Schema Cache
 
 A database schema loading and caching library for [Laravel](https://laravel.com/).
 
-test
 
 ## Installation
 
