@@ -36,4 +36,13 @@ class SchemaHolder
 
         return $this->tables[$table];
     }
+
+    /**
+     * Get all tables
+     * @return Table[]
+     */
+    public function getTables(): array
+    {
+        return $this->tables;
+    }
 }
